@@ -185,3 +185,52 @@
             }
         });
     });
+
+      // Filter functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            // Update active button
+            filterBtns.forEach(b => {
+              b.classList.remove('bg-green-500', 'text-white');
+              b.classList.add('text-gray-600', 'hover:text-green-600');
+            });
+            this.classList.add('bg-green-500', 'text-white');
+            this.classList.remove('text-gray-600', 'hover:text-green-600');
+
+            // Filter items
+            const filter = this.getAttribute('data-filter');
+            
+            galleryItems.forEach(item => {
+              if (filter === 'all' || item.classList.contains(filter)) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                  item.style.opacity = '1';
+                  item.style.transform = 'scale(1)';
+                }, 10);
+              } else {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                  item.style.display = 'none';
+                }, 300);
+              }
+            });
+          });
+        });
+
+        // Auto-play videos on hover
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+          video.addEventListener('mouseenter', function() {
+            this.play();
+          });
+          video.addEventListener('mouseleave', function() {
+            this.pause();
+            this.currentTime = 0;
+          });
+        });
+      });
