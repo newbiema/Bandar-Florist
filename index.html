@@ -322,7 +322,7 @@
         </div>
     </section>
 
-<!-- Gallery Section -->
+<!-- Gallery Section - AUTO PLAY ON HOVER -->
 <section id="gallery" class="py-20 bg-gradient-to-b from-white to-green-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Heading -->
@@ -334,7 +334,7 @@
         Lihat <span class="text-green-600">Keindahan</span> dalam Gerakan
       </h2>
       <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-        Jelajahi koleksi tanaman kami melalui foto dan video yang menampilkan keindahan alami mereka.
+        Arahkan kursor ke video untuk melihatnya berputar otomatis.
       </p>
     </div>
 
@@ -356,33 +356,34 @@
     <!-- Gallery Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       
-      <!-- Video Card 1 -->
-      <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item video">
+      <!-- Video Card 1 - HOVER PLAY -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item video video-container">
         <div class="aspect-video overflow-hidden bg-gradient-to-br from-green-100 to-green-200 relative">
-          <img src="img/thumbnails/1.JPG" 
-               alt="Time-lapse Monstera" 
-               class="w-full h-full object-cover absolute inset-0 video-fallback">
-          
-          <video class="w-full h-full object-cover absolute inset-0 video-element transform group-hover:scale-105 transition duration-700" 
-                 muted loop preload="metadata"
-                 poster="img/thumbnails/1.JPG">
+          <!-- Video Element dengan hover play -->
+          <video class="w-full h-full object-cover video-element" 
+                 muted 
+                 loop
+                 preload="metadata"
+                 poster="/img/thumbnails/1.JPG">
             <source src="video/1.mp4" type="video/mp4">
             Browser Anda tidak mendukung tag video.
           </video>
           
-          <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-all duration-500 cursor-pointer video-play-trigger">
-            <div class="bg-white/90 backdrop-blur-sm p-3 rounded-full transform scale-100 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-              <i class="fas fa-play text-green-600 text-lg"></i>
+          <!-- Play Indicator -->
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-all duration-500 video-play-indicator">
+            <div class="bg-white/90 backdrop-blur-sm p-4 rounded-full transform scale-100 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i class="fas fa-play text-green-600 text-xl"></i>
             </div>
           </div>
           
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
-            <div>
+          <!-- Video Info -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-4">
+            <div class="transform translate-y-0 group-hover:translate-y-0 transition-transform duration-500">
               <h3 class="text-lg font-heading text-white mb-1">Time-lapse Monstera</h3>
               <p class="text-green-100 text-xs mb-2">Pertumbuhan daun dalam 2 minggu</p>
               <div class="flex items-center text-green-100 text-xs">
                 <i class="fas fa-clock mr-1"></i>
-                <span>30 detik</span>
+                <span>30 detik • Hover untuk putar</span>
               </div>
             </div>
           </div>
@@ -396,7 +397,7 @@
       <!-- Photo Card 1 -->
       <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item photo" onclick="openLightbox(this)">
         <div class="aspect-square overflow-hidden bg-gray-100">
-          <img src="/img/galeri/1.jpg" 
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                alt="Monstera Deliciosa" 
                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
         </div>
@@ -418,32 +419,33 @@
         </div>
       </div>
 
-      <!-- Video Card 2 -->
-      <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item video">
+      <!-- Video Card 2 - HOVER PLAY -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item video video-container">
         <div class="aspect-video overflow-hidden bg-gradient-to-br from-green-100 to-green-200 relative">
-          <img src="img/thumbnails/1.JPG" 
-               alt="Tips Perawatan Sukulen" 
-               class="w-full h-full object-cover absolute inset-0 video-fallback">
-          
-          <video class="w-full h-full object-cover absolute inset-0 video-element transform group-hover:scale-105 transition duration-700" 
-                 muted loop preload="metadata"
-                 poster="img/thumbnails/1.JPG">
-            <source src="video/2.mp4" type="video/mp4">
+          <!-- Video Element dengan hover play -->
+          <video class="w-full h-full object-cover video-element" 
+                 muted 
+                 loop
+                 preload="metadata"
+                 poster="https://images.unsplash.com/photo-1598880940086-4b2f7ada519b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-person-holding-a-pink-flower-1172-large.mp4" type="video/mp4">
           </video>
           
-          <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-all duration-500 cursor-pointer video-play-trigger">
-            <div class="bg-white/90 backdrop-blur-sm p-3 rounded-full transform scale-100 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-              <i class="fas fa-play text-green-600 text-lg"></i>
+          <!-- Play Indicator -->
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-all duration-500 video-play-indicator">
+            <div class="bg-white/90 backdrop-blur-sm p-4 rounded-full transform scale-100 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i class="fas fa-play text-green-600 text-xl"></i>
             </div>
           </div>
           
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
-            <div>
+          <!-- Video Info -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-4">
+            <div class="transform translate-y-0 group-hover:translate-y-0 transition-transform duration-500">
               <h3 class="text-lg font-heading text-white mb-1">Tips Perawatan Sukulen</h3>
               <p class="text-green-100 text-xs mb-2">Cara merawat tanaman sukulen dengan benar</p>
               <div class="flex items-center text-green-100 text-xs">
                 <i class="fas fa-clock mr-1"></i>
-                <span>45 detik</span>
+                <span>45 detik • Hover untuk putar</span>
               </div>
             </div>
           </div>
@@ -457,7 +459,7 @@
       <!-- Photo Card 2 -->
       <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item photo" onclick="openLightbox(this)">
         <div class="aspect-square overflow-hidden bg-gray-100">
-          <img src="/img/galeri/2.jpg" 
+          <img src="https://images.unsplash.com/photo-1598880940086-4b2f7ada519b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                alt="Succulent Collection" 
                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
         </div>
@@ -476,32 +478,33 @@
         </div>
       </div>
 
-      <!-- Video Card 3 -->
-      <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item video">
+      <!-- Video Card 3 - HOVER PLAY -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item video video-container">
         <div class="aspect-video overflow-hidden bg-gradient-to-br from-green-100 to-green-200 relative">
-          <img src="/img/thumbnails/3.JPG" 
-               alt="Tour Nursery" 
-               class="w-full h-full object-cover absolute inset-0 video-fallback">
-          
-          <video class="w-full h-full object-cover absolute inset-0 video-element transform group-hover:scale-105 transition duration-700" 
-                 muted loop preload="metadata"
-                 poster="/img/thumbnails/3.JPG">
-            <source src="/video/3.mp4" type="video/mp4">
+          <!-- Video Element dengan hover play -->
+          <video class="w-full h-full object-cover video-element" 
+                 muted 
+                 loop
+                 preload="metadata"
+                 poster="https://images.unsplash.com/photo-1574085738196-89e15c9d0c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-walking-towards-a-green-forest-1175-large.mp4" type="video/mp4">
           </video>
           
-          <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-all duration-500 cursor-pointer video-play-trigger">
-            <div class="bg-white/90 backdrop-blur-sm p-3 rounded-full transform scale-100 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-              <i class="fas fa-play text-green-600 text-lg"></i>
+          <!-- Play Indicator -->
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-all duration-500 video-play-indicator">
+            <div class="bg-white/90 backdrop-blur-sm p-4 rounded-full transform scale-100 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i class="fas fa-play text-green-600 text-xl"></i>
             </div>
           </div>
           
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
-            <div>
+          <!-- Video Info -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-4">
+            <div class="transform translate-y-0 group-hover:translate-y-0 transition-transform duration-500">
               <h3 class="text-lg font-heading text-white mb-1">Tour Nursery Kami</h3>
               <p class="text-green-100 text-xs mb-2">Lihat proses perawatan tanaman kami</p>
               <div class="flex items-center text-green-100 text-xs">
                 <i class="fas fa-clock mr-1"></i>
-                <span>60 detik</span>
+                <span>60 detik • Hover untuk putar</span>
               </div>
             </div>
           </div>
@@ -515,7 +518,7 @@
       <!-- Photo Card 3 -->
       <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item photo" onclick="openLightbox(this)">
         <div class="aspect-square overflow-hidden bg-gray-100">
-          <img src="/img/galeri/3.jpg" 
+          <img src="https://images.unsplash.com/photo-1574085738196-89e15c9d0c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                alt="Peace Lily" 
                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
         </div>
@@ -1051,110 +1054,98 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script>
-      // Video Players Functionality - ULTIMATE FIX
+      // Advanced Video Players dengan Hover Effect
 function initVideoPlayers() {
-    const videoCards = document.querySelectorAll('.gallery-item.video');
+    console.log('🎬 Initializing hover video players');
     
-    console.log(`🎬 Found ${videoCards.length} video cards`);
+    const videoContainers = document.querySelectorAll('.video-container');
     
-    videoCards.forEach((card, index) => {
-        const video = card.querySelector('video');
-        const playOverlay = card.querySelector('.video-play-overlay');
+    videoContainers.forEach((container, index) => {
+        const video = container.querySelector('video');
+        const playIndicator = container.querySelector('.video-play-indicator');
         
-        console.log(`Video ${index + 1}:`, {
-            video: !!video,
-            playOverlay: !!playOverlay,
-            src: video ? video.querySelector('source')?.src : 'no video'
-        });
-        
-        if (video && playOverlay) {
-            // Debug: Log video state
-            video.addEventListener('loadeddata', () => {
-                console.log(`✅ Video ${index + 1} loaded successfully`);
+        if (video) {
+            // Set video properties
+            video.muted = true;
+            video.loop = true;
+            video.playsInline = true;
+            
+            // Hover in - play video
+            container.addEventListener('mouseenter', function() {
+                console.log(`▶️ Hover on video ${index + 1}`);
+                
+                const playPromise = video.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        // Video started successfully
+                        console.log(`✅ Video ${index + 1} playing`);
+                        if (playIndicator) {
+                            playIndicator.style.opacity = '0';
+                        }
+                    }).catch(error => {
+                        console.log(`❌ Video ${index + 1} play failed:`, error);
+                        // Fallback: show controls if autoplay fails
+                        video.controls = true;
+                    });
+                }
             });
             
-            video.addEventListener('error', (e) => {
-                console.error(`❌ Video ${index + 1} error:`, e);
-                console.log('Video error details:', video.error);
+            // Hover out - pause video
+            container.addEventListener('mouseleave', function() {
+                console.log(`⏸️ Hover out from video ${index + 1}`);
+                
+                video.pause();
+                video.currentTime = 0; // Reset to beginning
+                
+                if (playIndicator) {
+                    playIndicator.style.opacity = '1';
+                }
             });
             
-            // Simple click handler
-            const handleVideoClick = function(e) {
+            // Video event listeners
+            video.addEventListener('loadeddata', function() {
+                console.log(`✅ Video ${index + 1} loaded and ready`);
+            });
+            
+            video.addEventListener('error', function(e) {
+                console.error(`❌ Video ${index + 1} error:`, this.error);
+                // Show error state
+                if (playIndicator) {
+                    const playButton = playIndicator.querySelector('div');
+                    if (playButton) {
+                        playButton.innerHTML = '<i class="fas fa-exclamation-triangle text-red-500 text-xl"></i>';
+                    }
+                }
+            });
+            
+            // Click to toggle play/pause (optional)
+            container.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 
-                console.log(`🎯 Clicked video ${index + 1}`, {
-                    paused: video.paused,
-                    ended: video.ended,
-                    currentTime: video.currentTime
-                });
-                
-                if (video.paused || video.ended) {
-                    // Try to play video
-                    const playPromise = video.play();
-                    
-                    if (playPromise !== undefined) {
-                        playPromise.then(() => {
-                            // Video played successfully
-                            console.log(`▶️ Video ${index + 1} playing`);
-                            playOverlay.style.opacity = '0';
-                            video.style.opacity = '1';
-                        }).catch(error => {
-                            // Video play failed
-                            console.log(`❌ Video ${index + 1} play failed:`, error);
-                            playOverlay.style.opacity = '1';
-                            video.style.opacity = '0.7';
-                            
-                            // Show error state
-                            const playButton = playOverlay.querySelector('.video-play-button');
-                            if (playButton) {
-                                playButton.innerHTML = '<i class="fas fa-exclamation-triangle text-red-500 text-xl"></i>';
-                            }
-                        });
-                    }
+                if (video.paused) {
+                    video.play();
+                    if (playIndicator) playIndicator.style.opacity = '0';
                 } else {
-                    // Video is playing, so pause it
                     video.pause();
-                    console.log(`⏸️ Video ${index + 1} paused`);
-                    playOverlay.style.opacity = '1';
-                }
-            };
-            
-            // Attach click handlers
-            playOverlay.addEventListener('click', handleVideoClick);
-            video.addEventListener('click', handleVideoClick);
-            
-            // Video event handlers
-            video.addEventListener('play', () => {
-                playOverlay.style.opacity = '0';
-            });
-            
-            video.addEventListener('pause', () => {
-                playOverlay.style.opacity = '1';
-            });
-            
-            video.addEventListener('ended', () => {
-                video.currentTime = 0;
-                playOverlay.style.opacity = '1';
-            });
-            
-            // Hover effects
-            card.addEventListener('mouseenter', () => {
-                const playButton = playOverlay.querySelector('.video-play-button');
-                if (playButton) {
-                    playButton.classList.add('scale-110');
+                    if (playIndicator) playIndicator.style.opacity = '1';
                 }
             });
-            
-            card.addEventListener('mouseleave', () => {
-                const playButton = playOverlay.querySelector('.video-play-button');
-                if (playButton) {
-                    playButton.classList.remove('scale-110');
-                }
-            });
-        } else {
-            console.warn(`⚠️ Video card ${index + 1} missing video or play overlay`);
         }
+    });
+    
+    // Preload first frame of videos for better performance
+    preloadVideos();
+}
+
+// Preload videos for better performance
+function preloadVideos() {
+    const videos = document.querySelectorAll('.video-element');
+    videos.forEach(video => {
+        video.preload = 'metadata';
+        // Force load the first frame
+        video.load();
     });
 }
     </script>
