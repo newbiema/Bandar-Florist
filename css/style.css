@@ -274,3 +274,134 @@
 .border-primary-200 {
   border-color: var(--primary-200);
 }
+
+/* Gallery Styles */
+.gallery-item {
+  transition: all 0.3s ease;
+}
+
+.gallery-item.hidden {
+  display: none;
+}
+
+/* Video Styles */
+.video-element {
+  transition: all 0.5s ease;
+}
+
+.video-fallback {
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Responsive Improvements */
+@media (max-width: 640px) {
+  .hero-image::before {
+    border-radius: 1rem;
+  }
+  
+  .floating-shape {
+    display: none;
+  }
+}
+
+
+
+/* Footer Styles */
+footer a:hover {
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px) scale(1.1);
+}
+
+/* Trust badges animation */
+footer .flex.items-center.space-x-2 {
+    transition: all 0.3s ease;
+}
+
+footer .flex.items-center.space-x-2:hover {
+    transform: translateY(-2px);
+    color: white;
+}
+
+
+/* Video Styles - Diperbaiki */
+.video-element {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.video-fallback {
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.video-play-overlay {
+    transition: all 0.3s ease;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.video-play-button {
+    transition: all 0.3s ease;
+}
+
+.video-info {
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Hide native video controls */
+.video-element::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-element::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+.video-element::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+.video-element::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+/* Loading state untuk video */
+.video-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #ffffff;
+    border-top: 3px solid #10b981;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
