@@ -284,58 +284,172 @@
   display: none;
 }
 
-/* Video Styles */
-.video-element {
-  transition: all 0.5s ease;
-}
+/* Video Style */
 
-.video-fallback {
-  transition: opacity 0.3s ease;
-  z-index: 1;
-}
-
-/* Video Hover Effects */
 .video-container {
-  transition: all 0.3s ease;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .video-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(34, 197, 94, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(34, 197, 94, 0.25);
 }
 
+/* Video Element Styling */
 .video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: all 0.5s ease;
-  filter: brightness(0.9);
+  filter: brightness(0.85);
+  border-radius: 1rem;
 }
 
 .video-container:hover .video-element {
   filter: brightness(1);
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
+/* Play Indicator - Center Play Button */
 .video-play-indicator {
-  transition: all 0.3s ease;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+  transition: all 0.4s ease;
   opacity: 1;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .video-container:hover .video-play-indicator {
   opacity: 0;
+  transform: scale(1.1);
 }
 
-/* Smooth video play/pause */
-video {
-  transition: opacity 0.3s ease;
+.video-play-button {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.25rem;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.video-container:hover .video-play-button {
+  transform: scale(1.1);
+}
+
+/* Video Info Overlay - Same as Photo */
+.video-info-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(21, 128, 61, 0.85) 0%, transparent 50%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.video-container:hover .video-info-overlay {
+  opacity: 1;
+}
+
+.video-info-content {
+  transform: translateY(20px);
+  transition: transform 0.5s ease;
+}
+
+.video-container:hover .video-info-content {
+  transform: translateY(0);
+}
+
+/* Video Badge */
+.video-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--primary-500);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 4;
+  backdrop-filter: blur(10px);
+}
+
+/* Expand Icon for Video */
+.video-expand-icon {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+  z-index: 4;
+}
+
+.video-container:hover .video-expand-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Video Loading State */
+.video-loading {
+  position: relative;
+}
+
+.video-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid var(--primary-500);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+/* Hide native video controls when using custom controls */
+.video-element::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-element::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+.video-element::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+.video-element::-webkit-media-controls-start-playback-button {
+  display: none !important;
 }
 
 /* Loading Animation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.loading-spinner {
-  animation: spin 1s linear infinite;
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 /* Responsive Improvements */
@@ -347,98 +461,36 @@ video {
   .floating-shape {
     display: none;
   }
+  
+  .video-container:hover {
+    transform: translateY(-4px);
+  }
+  
+  .video-info-overlay {
+    padding: 1rem;
+  }
 }
-
-
 
 /* Footer Styles */
 footer a:hover {
-    transform: translateX(5px);
-    transition: all 0.3s ease;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
 }
 
 .social-icon {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: translateY(-2px) scale(1.1);
+  transform: translateY(-2px) scale(1.1);
 }
 
 /* Trust badges animation */
 footer .flex.items-center.space-x-2 {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 footer .flex.items-center.space-x-2:hover {
-    transform: translateY(-2px);
-    color: white;
-}
-
-
-/* Video Styles - Diperbaiki */
-.video-element {
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.video-fallback {
-    transition: opacity 0.3s ease;
-    z-index: 1;
-}
-
-.video-play-overlay {
-    transition: all 0.3s ease;
-    z-index: 2;
-    cursor: pointer;
-}
-
-.video-play-button {
-    transition: all 0.3s ease;
-}
-
-.video-info {
-    z-index: 3;
-    pointer-events: none;
-}
-
-/* Hide native video controls */
-.video-element::-webkit-media-controls {
-    display: none !important;
-}
-
-.video-element::-webkit-media-controls-panel {
-    display: none !important;
-}
-
-.video-element::-webkit-media-controls-play-button {
-    display: none !important;
-}
-
-.video-element::-webkit-media-controls-start-playback-button {
-    display: none !important;
-}
-
-/* Loading state untuk video */
-.video-loading::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    border: 3px solid #ffffff;
-    border-top: 3px solid #10b981;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
-
-
-
-@keyframes spin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  transform: translateY(-2px);
+  color: white;
 }

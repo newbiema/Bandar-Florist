@@ -44,7 +44,7 @@
                         <i class="fas fa-shopping-bag mr-2 text-green-400 group-hover:text-green-500 transition-colors"></i> 
                         Produk
                     </a>
-                    <a href="#contact" class="text-gray-700 hover:text-green-600 transition flex items-center font-medium group">
+                    <a href="#footer" class="text-gray-700 hover:text-green-600 transition flex items-center font-medium group">
                         <i class="fas fa-envelope mr-2 text-green-400 group-hover:text-green-500 transition-colors"></i> 
                         Kontak
                     </a>
@@ -361,7 +361,7 @@
       <!-- Photo Card 1 -->
       <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item photo" onclick="openLightbox(this)">
         <div class="aspect-square overflow-hidden bg-gray-100">
-          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+          <img src="img/galeri/1.jpg" 
                alt="Monstera Deliciosa" 
                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
         </div>
@@ -379,13 +379,13 @@
           <i class="fas fa-expand text-green-600 text-sm"></i>
         </div>
         <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-          Popular
+          <i class="fas fa-image mr-1"></i> Photo
         </div>
       </div>
       <!-- Photo Card 2 -->
       <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item photo" onclick="openLightbox(this)">
         <div class="aspect-square overflow-hidden bg-gray-100">
-          <img src="https://images.unsplash.com/photo-1598880940086-4b2f7ada519b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+          <img src="img/galeri/2.jpg" 
                alt="Succulent Collection" 
                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
         </div>
@@ -402,13 +402,16 @@
         <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-0 group-hover:scale-100">
           <i class="fas fa-expand text-green-600 text-sm"></i>
         </div>
+        <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+          <i class="fas fa-image mr-1"></i> Photo
+        </div>
       </div>
 
 
       <!-- Photo Card 3 -->
       <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer scroll-reveal gallery-item photo" onclick="openLightbox(this)">
         <div class="aspect-square overflow-hidden bg-gray-100">
-          <img src="https://images.unsplash.com/photo-1574085738196-89e15c9d0c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+          <img src="img/galeri/3.jpg" 
                alt="Peace Lily" 
                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
         </div>
@@ -425,9 +428,9 @@
         <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-0 group-hover:scale-100">
           <i class="fas fa-expand text-green-600 text-sm"></i>
         </div>
-        <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-          New
-        </div>
+          <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+            <i class="fas fa-image mr-1"></i> Photo
+          </div>
       </div>
 
 
@@ -438,8 +441,7 @@
           <video class="w-full h-full object-cover video-element" 
                  muted 
                  loop
-                 preload="metadata"
-                 poster="img/thumbnails/1.JPG">
+                 preload="metadata">
             <source src="video/1.mp4" type="video/mp4">
             Browser Anda tidak mendukung tag video.
           </video>
@@ -474,16 +476,15 @@
         </div>
       </div>
 
-            <!-- Video Card 1 - INFO SAMA SEPERTI FOTO -->
+            <!-- Video Card 2 -->
       <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer gallery-item video w-full h-0 pb-[56.25%] scroll-reveal gallery-item video video-container">
         <div class="absolute inset-0 w-full h-full">
           <!-- Video Element -->
           <video class="w-full h-full object-cover video-element" 
                  muted 
                  loop
-                 preload="metadata"
-                 poster="img/thumbnails/1.JPG">
-            <source src="video/1.mp4" type="video/mp4">
+                 preload="metadata">
+            <source src="video/2.mp4" type="video/mp4">
             Browser Anda tidak mendukung tag video.
           </video>
           
@@ -517,16 +518,15 @@
         </div>
       </div>
 
-            <!-- Video Card 1 - INFO SAMA SEPERTI FOTO -->
+            <!-- Video Card 3 -->
       <div class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer gallery-item video w-full h-0 pb-[56.25%] scroll-reveal gallery-item video video-container">
         <div class="absolute inset-0 w-full h-full">
           <!-- Video Element -->
           <video class="w-full h-full object-cover video-element" 
                  muted 
                  loop
-                 preload="metadata"
-                 poster="img/thumbnails/1.JPG">
-            <source src="video/1.mp4" type="video/mp4">
+                 preload="metadata">
+            <source src="video/3.mp4" type="video/mp4">
             Browser Anda tidak mendukung tag video.
           </video>
           
@@ -560,14 +560,6 @@
         </div>
       </div>
 
-    </div>
-
-    <!-- View More Button -->
-    <div class="text-center mt-12 scroll-reveal">
-      <button class="bg-green-500 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-green-600 transition-all duration-300 flex items-center mx-auto group hover:shadow-xl hover:-translate-y-0.5">
-        <i class="fas fa-eye mr-2 group-hover:scale-110 transition-transform"></i>
-        <span class="font-semibold">Lihat Lebih Banyak</span>
-      </button>
     </div>
   </div>
 </section>
@@ -862,9 +854,9 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gradient-to-br from-green-800 to-emerald-900 text-white">
+<footer class="bg-gradient-to-br from-green-800 to-emerald-900 text-white" id="footer">
   <div class="max-w-7xl mx-auto px-6 py-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 content-center">
       
       <!-- Brand / Nama Toko -->
       <div class="lg:col-span-1">
@@ -875,17 +867,17 @@
           Menghadirkan keindahan alam melalui tanaman hias berkualitas untuk menciptakan ruangan yang lebih hidup dan sehat.
         </p>
         <div class="flex space-x-3">
-          <a href="#" class="social-icon bg-green-700 p-3 rounded-xl hover:bg-green-600 transition-all duration-300">
-            <i class="fab fa-instagram"></i>
+          <a href="https://www.instagram.com/bandarflorist04" class="social-icon bg-green-700 p-3 rounded-xl hover:bg-green-600 transition-all duration-300">
+            <i class="fab text-white fa-instagram"></i>
           </a>
-          <a href="#" class="social-icon bg-green-700 p-3 rounded-xl hover:bg-green-600 transition-all duration-300">
-            <i class="fab fa-facebook-f"></i>
+          <a href="https://shopee.co.id/bandar_florist" class="social-icon bg-green-700 p-3 rounded-xl hover:bg-green-600 transition-all duration-300">
+            <i class="fa-solid fa-store text-white"></i>
           </a>
-          <a href="#" class="social-icon bg-green-700 p-3 rounded-xl hover:bg-green-600 transition-all duration-300">
-            <i class="fab fa-tiktok"></i>
+          <a href="" class="social-icon bg-green-700 p-3 rounded-xl hover:bg-green-600 transition-all duration-300">
+            <i class="fab text-white fa-tiktok"></i>
           </a>
-          <a href="#" class="social-icon bg-green-700 p-3 rounded-xl hover:bg-green-600 transition-all duration-300">
-            <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/+6281216938890" class="social-icon bg-green-700 p-3 rounded-xl hover:bg-green-600 transition-all duration-300">
+            <i class="fab text-white fa-whatsapp"></i>
           </a>
         </div>
       </div>
@@ -927,75 +919,7 @@
         </ul>
       </div>
 
-      <!-- Produk -->
-      <div>
-        <h3 class="text-lg font-bold mb-6 text-green-100">Kategori Produk</h3>
-        <ul class="space-y-3">
-          <li>
-            <a href="#" class="text-green-200 hover:text-white transition-all duration-300 flex items-center group">
-              <i class="fas fa-leaf mr-2 text-green-400 text-sm"></i> 
-              Tanaman Hias Indoor
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-green-200 hover:text-white transition-all duration-300 flex items-center group">
-              <i class="fas fa-tree mr-2 text-green-400 text-sm"></i> 
-              Tanaman Hias Outdoor
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-green-200 hover:text-white transition-all duration-300 flex items-center group">
-              <i class="fas fa-pagelines mr-2 text-green-400 text-sm"></i> 
-              Sukulen & Kaktus
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-green-200 hover:text-white transition-all duration-300 flex items-center group">
-              <i class="fas fa-seedling mr-2 text-green-400 text-sm"></i> 
-              Bibit Tanaman
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-green-200 hover:text-white transition-all duration-300 flex items-center group">
-              <i class="fas fa-shopping-bag mr-2 text-green-400 text-sm"></i> 
-              Aksesoris Tanaman
-            </a>
-          </li>
-        </ul>
-      </div>
 
-      <!-- Newsletter & Kontak -->
-      <div>
-        <h3 class="text-lg font-bold mb-6 text-green-100">Berlangganan</h3>
-        <p class="text-green-200 mb-4 leading-relaxed">
-          Dapatkan tips perawatan tanaman dan penawaran spesial langsung di inbox Anda.
-        </p>
-        <div class="flex flex-col space-y-3">
-          <input type="email" placeholder="Email Anda" class="px-4 py-3 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500">
-          <button class="bg-green-500 text-white px-6 py-3 rounded-xl hover:bg-green-400 transition-all duration-300 flex items-center justify-center font-semibold group">
-            <i class="fas fa-paper-plane mr-2 group-hover:scale-110 transition-transform"></i>
-            Berlangganan
-          </button>
-        </div>
-
-        <!-- Info Kontak Footer -->
-        <div class="mt-6 pt-6 border-t border-green-700">
-          <div class="space-y-2 text-green-200 text-sm">
-            <div class="flex items-center">
-              <i class="fas fa-phone mr-3 text-green-400 text-xs"></i>
-              <span>(021) 1234-5678</span>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-envelope mr-3 text-green-400 text-xs"></i>
-              <span>info@bandarflorist.com</span>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-map-marker-alt mr-3 text-green-400 text-xs"></i>
-              <span>Jakarta Selatan</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
     </div>
 
@@ -1007,33 +931,6 @@
         <div class="text-green-300 text-sm">
           © 2025 Bandar Florist. Semua Hak Cipta Dilindungi.
         </div>
-
-        <!-- Payment Methods -->
-        <div class="flex items-center space-x-4">
-          <span class="text-green-300 text-sm mr-3">Metode Pembayaran:</span>
-          <div class="flex space-x-2">
-            <div class="bg-white p-1 rounded">
-              <i class="fab fa-cc-visa text-blue-600 text-lg"></i>
-            </div>
-            <div class="bg-white p-1 rounded">
-              <i class="fab fa-cc-mastercard text-red-600 text-lg"></i>
-            </div>
-            <div class="bg-white p-1 rounded">
-              <i class="fab fa-cc-paypal text-blue-500 text-lg"></i>
-            </div>
-            <div class="bg-white p-1 rounded">
-              <i class="fas fa-mobile-alt text-green-600 text-lg"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Legal Links -->
-        <div class="flex space-x-6 text-green-300 text-sm">
-          <a href="#" class="hover:text-white transition hover:underline">Syarat & Ketentuan</a>
-          <a href="#" class="hover:text-white transition hover:underline">Kebijakan Privasi</a>
-          <a href="#" class="hover:text-white transition hover:underline">FAQ</a>
-        </div>
-
       </div>
     </div>
 
