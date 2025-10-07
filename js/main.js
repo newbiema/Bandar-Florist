@@ -168,7 +168,7 @@ function initSmoothScroll() {
     }
 }
 
-// Gallery Filter Functionality
+// Gallery Buat Filter Cuy
 function initGalleryFilter() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
@@ -288,29 +288,6 @@ function initVideoPlayers() {
     });
 }
 
-// Contact Form Functionality
-function initContactForm() {
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            console.log('Form submitted:', data);
-            
-            // Show success message
-            alert('Terima kasih! Pesan Anda telah berhasil dikirim. Kami akan menghubungi Anda segera.');
-            
-            // Reset form
-            contactForm.reset();
-        });
-    }
-}
-
 // Product card interactions
 function initProductInteractions() {
     const productCards = document.querySelectorAll('.product-card');
@@ -411,5 +388,3 @@ window.debounce = function(func, wait) {
         timeout = setTimeout(later, wait);
     };
 };
-
-console.log('✅ Bandar Florist JavaScript loaded successfully');
